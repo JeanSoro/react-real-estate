@@ -1,11 +1,6 @@
-import React, { Component} from 'react'
+import React from 'react'
 
-export default class Header extends Component {
-  state = {
-    name: 'Jean'
-  };
-  
-  render () {
+const Header = () => {
     return (
       <header>
         <div className="logo">Real Estate App</div>
@@ -18,4 +13,7 @@ export default class Header extends Component {
       </header>
     )
   }
-}
+
+  export default Header;
+
+
