@@ -13,7 +13,7 @@ var listingsData = [{
   address: '20-34 pretoria street',
   city: 'Ottawa',
   province: 'ON',
-  realtor: 'Kelly Ann',
+  realtor: 'Teresa Mendoza',
   rooms: 2,
   postedOn: '09/08/2018',
   price: 850000,
@@ -32,7 +32,7 @@ var listingsData = [{
   floorSpace: 1500,
   extras: ['elevator', 'gym'],
   homeType: 'Studio',
-  image: 'https://www.adinahotels.com/wp-content/uploads/sites/4/2016/07/adina-melbourne-flinders-street-apartment-hotel-one-and-two-bedroom-apartment-2-2013-768x576.jpg'
+  image: 'http://belloiserealty.com/wp-content/uploads/2018/06/south-beach-condo-4-768x576.jpg'
 }, {
   address: '78-548 Queens ave',
   city: 'Montreal',
@@ -56,7 +56,7 @@ var listingsData = [{
   floorSpace: 3000,
   extras: ['elevator', 'gym', 'basement'],
   homeType: 'Condo',
-  image: 'http://cashadvancefor.me/wp-content/uploads/2018/05/modern-house-interior-designs-pictures-interior-design-modern-house-pertaining-to-house-interior-ideas-modern-home-interior-design-pictures.jpg'
+  image: 'https://modtraveler.net/wp-content/uploads/2017/09/IMG_0212-768x576.jpg'
 }, {
   address: '10-6778 ugk drive',
   city: 'Toronto',
@@ -92,7 +92,7 @@ var listingsData = [{
   floorSpace: 3200,
   extras: ['elevator', 'gym', 'basement'],
   homeType: 'Apartment',
-  image: 'http://www.multeci.info/wp-content/uploads/2018/05/modern-interior-house-design-excellent-and.jpg'
+  image: 'https://www.condo613.ca/wp-content/uploads/2019/09/SAM_1299-768x576.jpg'
 }, {
   address: '25-5500 cool ave',
   city: 'Miami',
@@ -352,8 +352,9 @@ var App = function (_Component) {
 }(_react.Component);
 
 var app = document.getElementById('app');
-
 _reactDom2.default.render(_react2.default.createElement(App, null), app);
+
+// <ModalComponent/>
 
 /***/ }),
 
@@ -424,11 +425,13 @@ var Filter = function (_Component) {
         });
       }
     }, _this.bedrooms = function () {
-      if (_this.props.globalState.populateFormsData.bedrooms != undefined) {
-        var bedrooms = _this.props.globalState.populateFormsData.bedrooms;
+      var bedrooms = _this.props.globalState.populateFormsData.bedrooms;
+
+      if (bedrooms != undefined) {
+        var _bedrooms = _this.props.globalState.populateFormsData.bedrooms;
 
 
-        return bedrooms.map(function (item) {
+        return _bedrooms.map(function (item) {
           return _react2.default.createElement(
             'option',
             { key: item, value: item },

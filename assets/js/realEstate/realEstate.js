@@ -1,9 +1,10 @@
 import React, { Component} from 'react'
 import ReactDOM from 'react-dom'
 import Header from './Header.js'
-import Filter from './Filter.js'
-import Listings from './Listings.js'
-import listingsData from './data/listingData.js'
+import Filter from './Filter.js';
+import Listings from './Listings.js';
+import listingsData from './data/listingData.js';
+
 
 class App extends Component {
   state = {
@@ -148,7 +149,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <Header />
+       <Header /> 
          <section id="content-area">
           <Filter 
             change={this.change} 
@@ -162,11 +163,15 @@ class App extends Component {
             changeView={this.changeView}
           />
         </section>
+      
       </div>
     );
   }
 }
 
 const app = document.getElementById('app')
-
 ReactDOM.render(<App />, app)
+
+
+
+// <ModalComponent/>
